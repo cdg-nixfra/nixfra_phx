@@ -19,7 +19,7 @@ sed \
     -e "s,@@GIT_URL@@,$git_url," \
     -e "s,@@GIT_REV@@,$git_rev," \
     -e "s,@@GIT_SHA256@@,$git_sha256," \
-    <default.nix >$WORK/default.nix
+    <nix/default.nix >$WORK/default.nix
 
 nix-shell -p mix2nix --run mix2nix >$WORK/mix_deps.nix
 
