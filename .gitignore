@@ -35,3 +35,7 @@ nixfra_phx-*.tar
 npm-debug.log
 /assets/node_modules/
 
+*.gz
+robots-*.txt
+priv/static/favicon-*.ico
+priv/static/images/logo-*.svg
