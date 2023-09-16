@@ -18,13 +18,6 @@ let
   mixNixDeps = import ./mix_deps.nix {
     inherit beamPackages lib;
   };
-  #mixFodDeps = packages.fetchMixDeps {
-    #pname = "mix-deps-${pname}";
-    #inherit src version sha256;
-    #mixEnv = "prod"; # default is "prod", when empty includes all dependencies, such as "dev", "test".
-    # if you have build time environment variables add them here
-    # MY_ENV_VAR="my_value";
-  #};
 
   #nodeDependencies = (pkgs.callPackage ./assets/default.nix { }).shell.nodeDependencies;
 
