@@ -1,8 +1,11 @@
 
+package: release
+	nix/build-package.sh
 
-nix:
-	#mix2nix > mix_deps.nix
-	#nix-shell -p node2nix --run node2nix --development
+release: deps
+	MIX_ENV=prod mix compile
+	MIX_ENV=prod mix assets.deploy
+	MIX_ENV=prod mix release --overwrite
 
-build:
-	nix-build .
+deps:
+	mix deps.get
