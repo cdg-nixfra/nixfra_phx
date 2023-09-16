@@ -7,5 +7,5 @@ defmodule NixfraPhx do
   if it comes from the database, an external API or others.
   """
 
-  def hello, do: "Hello, world!"
+  def hello_world, do: "Hello, world!"
 end
