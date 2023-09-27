@@ -1,0 +1,14 @@
+name: Build nixfra_phx
+
+on:
+  push:
+
+jobs:
+  package:
+    runs-on: self-hosted
+    steps:
+    - name: Code checkout
+      uses: actions/checkout@v2
+    - name: Package
+      run: |
+        make package
