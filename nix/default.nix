@@ -30,6 +30,9 @@ in packages.mixRelease {
     #ln -sf {nodeDependencies}/lib/node_modules assets/node_modules
     #npm run deploy --prefix ./assets
 
+    echo "git_rev=@@GIT_REV@@" >priv/build.txt
+    echo "git_sha256=@@GIT_SHA256@@" >>priv/build.txt
+
     # for external task you need a workaround for the no deps check flag
     # https://github.com/phoenixframework/phoenix/issues/2690
     mix do deps.loadpaths --no-deps-check, phx.digest
