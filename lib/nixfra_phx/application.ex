@@ -10,8 +10,6 @@ defmodule NixfraPhx.Application do
     children = [
       # Start the Telemetry supervisor
       NixfraPhxWeb.Telemetry,
-      # Start the Ecto repository
-      NixfraPhx.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: NixfraPhx.PubSub},
       # Start Finch
