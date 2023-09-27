@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env nix-shell
+#! nix-shell -i bash -p coreutils bash jq gnused gnugrep mix2nix nix-prefetch-git
 
 base=$(cd $(dirname $0)/..; pwd)
 cd $base
@@ -23,7 +24,7 @@ sed \
 
 chksum=$(sha256sum mix.lock)
 grep -q "$chksum" mix_deps.nix 2>/dev/null || (
-  nix-shell -p mix2nix --run mix2nix >mix_deps.nix
+  mix2nix --run mix2nix >mix_deps.nix
   echo "# $chksum" >>mix_deps.nix
 )
 
