@@ -11,4 +11,4 @@ jobs:
       uses: actions/checkout@v2
     - name: Package
       run: |
-        make package
+        nix/build-package.sh
