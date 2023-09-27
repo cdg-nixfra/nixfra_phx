@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#! nix-shell -i bash -p coreutils bash jq gnused gnugrep mix2nix nix-prefetch-git
+#! nix-shell -i bash -p coreutils bash jq gnused gnugrep mix2nix nix-prefetch-git git
 
 base=$(cd $(dirname $0)/..; pwd)
 cd $base
