@@ -8,5 +8,5 @@ set -e
 
 export MIX_ENV=test
 
-mix deps.get
+mix deps.get --only $MIX_ENV
 mix test

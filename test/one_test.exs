@@ -6,6 +6,6 @@ defmodule OneTest do
   end
 
   test "something else" do
-    assert 2 + 2 == 4
+    assert 3 * 3 == 9
   end
 end
