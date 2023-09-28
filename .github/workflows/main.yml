@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Code checkout
       uses: actions/checkout@v2
+    - name: Test
+      run: |
+        nix/test.sh
     - name: Package
       run: |
         nix/build-package.sh

@@ -27,6 +27,7 @@ in packages.mixRelease {
   #MY_ENV_VAR="my_value";
 
   postBuild = ''
+    mix test
     #ln -sf {nodeDependencies}/lib/node_modules assets/node_modules
     #npm run deploy --prefix ./assets
 

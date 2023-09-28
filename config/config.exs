@@ -7,9 +7,6 @@
 # General application configuration
 import Config
 
-config :nixfra_phx,
-  ecto_repos: [NixfraPhx.Repo]
-
 # Configures the endpoint
 config :nixfra_phx, NixfraPhxWeb.Endpoint,
   url: [host: "localhost"],

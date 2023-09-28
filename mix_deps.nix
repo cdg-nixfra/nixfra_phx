@@ -309,12 +309,12 @@ let
 
     phoenix_live_dashboard = buildMix rec {
       name = "phoenix_live_dashboard";
-      version = "0.8.1";
+      version = "0.8.2";
 
       src = fetchHex {
         pkg = "${name}";
         version = "${version}";
-        sha256 = "1sdb61gmq2bn0rk73l9jgiz49lwikbab71hzfxpr3qac4xagk80w";
+        sha256 = "147ghzwardph1zl19gyqsf3lhrgr363jkq3p38q3sn2z3d29i9b7";
       };
 
       beamDeps = [ ecto mime phoenix_live_view telemetry_metrics ];
@@ -439,12 +439,12 @@ let
 
     swoosh = buildMix rec {
       name = "swoosh";
-      version = "1.11.6";
+      version = "1.12.0";
 
       src = fetchHex {
         pkg = "${name}";
         version = "${version}";
-        sha256 = "1mbz8bvh0kg7bv6f5p9lylz6cmvkg3536p51sgdl9qvlnv87pfvz";
+        sha256 = "1jbc9x17mjyq7ald46fjl9lc3j6h5r1cgby3xajqndayyfq7mnw7";
       };
 
       beamDeps = [ cowboy finch jason mime plug plug_cowboy telemetry ];
@@ -530,4 +530,4 @@ let
   };
 in self
 
-# c31e59e641f482b15da143674152474ad53daa8fcd785097fb509292ca0a4153  mix.lock
+# c9ae3cff637d36f084b4256e4d94092d261389de3564f442233ad1194861af17  mix.lock
