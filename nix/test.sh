@@ -8,5 +8,8 @@ set -e
 
 export MIX_ENV=test
 
+mix local.hex --if-missing
+mix local.rebar --if-missing
+
 mix deps.get
 mix test
